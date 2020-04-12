@@ -9,6 +9,11 @@ router.get('/health', (req, res) => {
   res.status('200').send("Status: ok!");
 });
 
+// healthcheck
+router.get('/test', (req, res) => {
+  res.status('200').send("Application Fine!!");
+});
+
 // retrieve all musicians from data store
 router.get('/all', (req, res) => {
   const { musician } = req.app.locals;
